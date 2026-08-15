@@ -28,7 +28,7 @@ print(precision)
 recall = tp/(fn+tp)
 print(recall)
 
-F1 = 2*((precision*recall)/precision+recall)
+F1 = 2*((precision*recall)/(precision+recall))
 print(F1)
 
 features = plants[["height_cm", "leaf_count"]]
@@ -46,3 +46,5 @@ model.fit(X_train, y_train)
 predictions = model.predict(X_test)
 
 print(predictions)
+
+#Використала вспоміжні джерела, щоб зрозуміти де помилка, як її виправити і щось додати до коду, щоб він працював (наприклад: from sklearn.neighbors import KNeighborsClassifier, from sklearn.metrics import confusion_matrix і тд...)
